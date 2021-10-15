@@ -2,13 +2,13 @@
   <div class="about">
     <b-container>
     <b-row class="d-flex justify-content-center">
-      <h1>{{h1}}</h1>
+      <h1>{{h14}}</h1>
     </b-row>
     <b-row class="d-flex justify-content-center">
        <img :src="src"  style="width:400px"  alt="">
     </b-row>
     <b-row>
-      <p>{{p1}}</p>
+      <p>{{p4}}</p>
     </b-row>
     <b-row class="d-flex justify-content-center">
        <b-button class="btn w-25"  :to="to12">На главную</b-button>
