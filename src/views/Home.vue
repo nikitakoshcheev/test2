@@ -5,6 +5,8 @@
       <withLoggerCard :src="src" :h1="h12" :a="a2" :to="to21"  v-sticky="20" style="z-index:3"></withLoggerCard>
       <Card :src="src" :h1="h13" :a="a3" :to="to31"></Card>
       <Card :src="src" :h1="h14" :a="a4" :to="to41"></Card>
+      <b-button to="/anim">anim</b-button>
+      <b-button to="/anim2">anim2</b-button>
     <div style="height:1000px"></div>
     </b-container>
   </div>

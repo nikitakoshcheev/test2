@@ -5,6 +5,8 @@ import About from "../views/About.vue";
 import About2 from "../views/About2.vue";
 import About3 from "../views/About3.vue";
 import About4 from "../views/About4.vue";
+import anim from "../views/anim.vue";
+import anim2 from "../views/anim2.vue";
 
 Vue.use(VueRouter);
 
@@ -13,6 +15,16 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/anim",
+    name: "anim",
+    component: anim,
+  },
+  {
+    path: "/anim2",
+    name: "anim2",
+    component: anim2,
   },
   {
     path: "/about",
