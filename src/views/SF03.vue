@@ -1,5 +1,5 @@
 <template>
-  <object3d :position="pos" base-url="../vendor/">
+  <object3d :position="pos" :rotation="rot" >
     <mesh>
       <m-obj-mtl obj-url="assembled.obj"
           mtl-url="assembled.mtl"
@@ -45,7 +45,7 @@ export default {
       },
       shoot: {
         matOpts: {
-          color: 0xffaacc,
+          color: 0xdaafffc,
           side: THREE.DoubleSide,
           blending: THREE.AdditiveBlending,
           depthWrite: false,
@@ -53,8 +53,37 @@ export default {
         },
         txtCanvas: this.generateShootCanvas()
       },
-      pos: null
+      pos: {
+          x:4,
+          y:1,
+          z:0
+      },
+      rot: {
+          x:0,
+          y:0,
+          z:0
+      }
     }
+  },
+   mounted(){
+    let d = 0;
+    var scrollPos = 0;
+     window.document.onscroll = () => {
+                  if (window.scrollY > 0 & window.scrollY <  3600 ) {
+            var st = window.scrollY;
+            if (st > scrollPos) {
+              d = 1;
+            } else {
+              d = -1;
+            }
+            if (d > 0) {
+              this.rot.y -= 0.35;
+            } else {
+              this.rot.y += 0.35;
+            }
+            scrollPos = st;
+          }   
+      }
   },
   methods: {
     animate (tt) {

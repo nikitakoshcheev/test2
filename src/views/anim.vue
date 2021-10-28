@@ -13,10 +13,9 @@ export default {
     let d = 0;
     var scrollPos = 0;
 const loader = new THREE.TextureLoader();
-    const can1 = document.querySelector('#can1');
-    const renderer = new THREE.WebGLRenderer({can1});
+    const renderer = new THREE.WebGLRenderer( { alpha: true });
     console.log(renderer)
-
+     renderer.setClearColor( 0x000000, 0 );
     renderer.setSize( 1200,1200 );
     document.body.appendChild( renderer.domElement);
     console.log(renderer.domElement)
